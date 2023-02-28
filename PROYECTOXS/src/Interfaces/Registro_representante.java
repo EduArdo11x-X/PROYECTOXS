@@ -36,10 +36,10 @@ public class Registro_representante extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        primernombre_repre = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        cedula_repr = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -104,10 +104,16 @@ public class Registro_representante extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Edad:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, 30));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 150, -1));
+        jPanel1.add(primernombre_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 150, -1));
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 150, -1));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 150, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 130, -1));
+
+        cedula_repr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cedula_reprActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cedula_repr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 130, -1));
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 150, -1));
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 150, -1));
 
@@ -179,6 +185,10 @@ public class Registro_representante extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void cedula_reprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedula_reprActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cedula_reprActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -215,6 +225,7 @@ public class Registro_representante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cedula_repr;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -240,11 +251,10 @@ public class Registro_representante extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField primernombre_repre;
     // End of variables declaration//GEN-END:variables
 }
