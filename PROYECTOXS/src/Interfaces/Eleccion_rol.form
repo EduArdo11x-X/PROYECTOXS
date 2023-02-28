@@ -61,7 +61,7 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ICONOS/4191357.png"/>
+          <Image iconType="3" name="/ICONOS/4509624.png"/>
         </Property>
       </Properties>
       <Events>
@@ -84,7 +84,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ICONOS/young-dad-with-mustache-avatar-line-and-fill-style-icon-free-vector.jpg"/>
+          <Image iconType="3" name="/ICONOS/3048150.png"/>
         </Property>
       </Properties>
       <Events>
