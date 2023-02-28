@@ -11,7 +11,7 @@ package Clases;
  */
 public class Representante {
     
-private int Cedula;
+    private int Cedula;
     private int Telefono;
     private String Correo_Electronico;
     private String Parentesco;
