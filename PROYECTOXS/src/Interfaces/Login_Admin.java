@@ -117,9 +117,9 @@ public class Login_Admin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jButton2)
-                        .addGap(48, 48, 48)
+                        .addGap(42, 42, 42)
                         .addComponent(jButton3)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
