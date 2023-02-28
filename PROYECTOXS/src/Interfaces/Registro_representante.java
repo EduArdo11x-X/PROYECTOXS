@@ -64,7 +64,7 @@ public class Registro_representante extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setText("Primer nombre:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
         jLabel3.setText("Segundo Apellido:");
@@ -72,7 +72,7 @@ public class Registro_representante extends javax.swing.JFrame {
 
         jLabel4.setForeground(new java.awt.Color(0, 102, 102));
         jLabel4.setText("Segundo nombre:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(0, 102, 102));
         jLabel5.setText("Calle Secundaria:");
@@ -80,11 +80,11 @@ public class Registro_representante extends javax.swing.JFrame {
 
         jLabel6.setForeground(new java.awt.Color(0, 102, 102));
         jLabel6.setText("Primer Apellido:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(0, 102, 102));
         jLabel7.setText("Sexo:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 189, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
 
         jLabel8.setForeground(new java.awt.Color(0, 102, 102));
         jLabel8.setText("Direccion");
@@ -92,20 +92,20 @@ public class Registro_representante extends javax.swing.JFrame {
 
         jLabel9.setForeground(new java.awt.Color(0, 102, 102));
         jLabel9.setText("Calle principal:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 68, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, 20));
 
         jLabel10.setForeground(new java.awt.Color(0, 102, 102));
         jLabel10.setText("Edad:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 161, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, -1));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 84, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 81, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 90, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 81, -1));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 90, -1));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(521, 207, 167, -1));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 136, -1, -1));
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 280, 310, -1));
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 257, 59, -1));
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 257, 285, -1));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 130, -1));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 130, -1));
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 102, 102));
@@ -114,7 +114,7 @@ public class Registro_representante extends javax.swing.JFrame {
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 64, -1, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/empleado.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 170, 150));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
