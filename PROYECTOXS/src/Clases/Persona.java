@@ -110,5 +110,8 @@ public class Persona {
         return "Persona{" + "Cedula=" + Cedula + ", Primer_nom=" + Primer_nom + ", Segundo_Nom=" + Segundo_Nom + ", Primer_Ape=" + Primer_Ape + ", Segundo_Ape=" + Segundo_Ape + ", Calle_principal=" + Calle_principal + ", Calle_Secundaria=" + Calle_Secundaria + ", Sexo=" + Sexo + ", Edad=" + Edad + '}';
     }
 
-    
+    public static void Validaciones() {
+        
+        
+    }
 }
