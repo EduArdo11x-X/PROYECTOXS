@@ -16,6 +16,7 @@ public class PROYECTOXS {
      */
     public static void main(String[] args) {
         System.out.println("FREEDY INFIEL");
+        Sstem.out.println("Holasoy yo de nuevo");
         // TODO code application logic here
     }
     
