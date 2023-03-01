@@ -5,15 +5,19 @@
  */
 package proyectoxs;
 
-import com.db4o.*;
+//import com.db4o.*;
+
+import Interfaces.Inicio;
+
 public class PROYECTOXS {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-   
-        ObjectContainer base= Db4o.openFile("");
+   Inicio mostrarInicio = new Inicio();
+   mostrarInicio.setVisible(true);
+        
        
     }
     
