@@ -5,19 +5,16 @@
  */
 package proyectoxs;
 
-/**
- *
- * @author EDU
- */
+import com.db4o.*;
 public class PROYECTOXS {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("FREEDY INFIEL");
-        System.out.println("Holasoy yo de nuevo");
-        // TODO code application logic here
+   
+        ObjectContainer base= Db4o.openFile("");
+       
     }
     
 }

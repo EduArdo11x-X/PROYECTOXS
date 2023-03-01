@@ -1,5 +1,7 @@
 package Interfaces;
 
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -107,6 +109,11 @@ public class Registro_representante extends javax.swing.JFrame {
                 cedula_reprActionPerformed(evt);
             }
         });
+        cedula_repr.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cedula_reprKeyTyped(evt);
+            }
+        });
         jPanel1.add(cedula_repr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 150, -1));
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 150, -1));
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 150, -1));
@@ -162,11 +169,6 @@ public class Registro_representante extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setText("Registrar Cuenta");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 140, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -188,7 +190,11 @@ public class Registro_representante extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void cedula_reprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedula_reprActionPerformed
-        // TODO add your handling code here:
+boolean resultado;
+
+
+
+// TODO add your handling code here:
     }//GEN-LAST:event_cedula_reprActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -200,6 +206,17 @@ public class Registro_representante extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void cedula_reprKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedula_reprKeyTyped
+char aux = evt.getKeyChar();
+boolean numeros = aux>=48 && aux<=57;
+if(numeros==false){
+    System.out.println("Esta digitando" + evt.getKeyChar());
+    evt.consume();
+
+}
+
+    }//GEN-LAST:event_cedula_reprKeyTyped
 
 
     /**
