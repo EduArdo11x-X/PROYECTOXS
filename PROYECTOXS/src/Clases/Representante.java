@@ -11,11 +11,11 @@ package Clases;
  */
 public class Representante extends Persona {
     
-    private int Telefono_repre;
+    private String Telefono_repre;
     private String Correo_Electronico_repre;
     private String Parentesco_repre;
 
-    public Representante(int Telefono_repre, String Correo_Electronico_repre, String Parentesco_repre, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+    public Representante(String Telefono_repre, String Correo_Electronico_repre, String Parentesco_repre, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, String Sexo, int Edad) {
         super(Cedula, Primer_nom, Segundo_Nom, Primer_Ape, Segundo_Ape, Calle_principal, Calle_Secundaria, Sexo, Edad);
         this.Telefono_repre = Telefono_repre;
         this.Correo_Electronico_repre = Correo_Electronico_repre;
@@ -26,11 +26,11 @@ public class Representante extends Persona {
         super();
     }
 
-    public int getTelefono_repre() {
+    public String getTelefono_repre() {
         return Telefono_repre;
     }
 
-    public void setTelefono_repre(int Telefono_repre) {
+    public void setTelefono_repre(String Telefono_repre) {
         this.Telefono_repre = Telefono_repre;
     }
 

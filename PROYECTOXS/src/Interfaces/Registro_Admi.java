@@ -5,19 +5,92 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+import Clases.Validaciones;
+
 /**
  *
  * @author HP
  */
 public class Registro_Admi extends javax.swing.JFrame {
 
+    
+    String ced_admi = "";
+    String nom_admi = "";
+    String nom2_admi = "";
+    String apellido_admi = "";
+    String apellido2_admi = "";
+    
+    
+    public void asignarVariables() {
+        ced_admi = txtcedula_admi.getText();
+        nom_admi = txtprimernombre_admi.getText();
+        nom2_admi = txtsegundonombre_admi.getText();
+        apellido_admi = txtprimerapellido_admi.getText();
+                apellido2_admi = txtsegundoapellido_admi.getText();
+      
+    }
     /**
      * Creates new form Registro_Admi
      */
     public Registro_Admi() {
         initComponents();
     }
-
+    
+    public boolean validarCampos() {
+    Validaciones miValidaciones = new Validaciones();
+    boolean ban_confirmar = true;
+    
+    
+    if (txtcedula_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese una Cedula");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarid(ced_admi)) {
+                JOptionPane.showMessageDialog(this, "Cedula invalida");
+                ban_confirmar = false;
+            }
+        }
+    
+    if (txtprimernombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+     if (txtsegundonombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom2_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+      if (txtprimerapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
+                ban_confirmar = false;
+            }
+        }
+      
+       if (txtsegundoapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido2_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
+                ban_confirmar = false;
+            }
+        }
+        return ban_confirmar;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -148,6 +221,11 @@ public class Registro_Admi extends javax.swing.JFrame {
         txttitulo_admi.setText("Psicologo");
 
         txttelefono_admi.setText("453454");
+        txttelefono_admi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttelefono_admiActionPerformed(evt);
+            }
+        });
 
         txtcorreo_admi.setText("andreacalle888@gmail.com");
 
@@ -344,6 +422,10 @@ public class Registro_Admi extends javax.swing.JFrame {
         Eleccion_rol vsar1 = new Eleccion_rol ();
         vsar1.setVisible(true);
     }//GEN-LAST:event_botonvolver_admiActionPerformed
+
+    private void txttelefono_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelefono_admiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttelefono_admiActionPerformed
 
     /**
      * @param args the command line arguments

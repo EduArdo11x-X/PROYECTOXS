@@ -18,10 +18,10 @@ public class Persona {
     private String Segundo_Ape;
     private String Calle_principal;
     private String Calle_Secundaria;
-    private char Sexo;
+    private String Sexo;
     private int Edad;
 
-    public Persona(String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+    public Persona(String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, String Sexo, int Edad) {
         this.Cedula = Cedula;
         this.Primer_nom = Primer_nom;
         this.Segundo_Nom = Segundo_Nom;
@@ -92,11 +92,11 @@ public class Persona {
         this.Calle_Secundaria = Calle_Secundaria;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return Sexo;
     }
 
-    public void setSexo(char Sexo) {
+    public void setSexo(String Sexo) {
         this.Sexo = Sexo;
     }
 

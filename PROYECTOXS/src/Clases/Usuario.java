@@ -14,7 +14,7 @@ public class Usuario extends Persona {
     private String Nivel_Conocimiento;
     private String Materias_Dificultad;
 
-    public Usuario(String Grado, String Nivel_Conocimiento, String Materias_Dificultad, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+    public Usuario(String Grado, String Nivel_Conocimiento, String Materias_Dificultad, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, String Sexo, int Edad) {
         super(Cedula, Primer_nom, Segundo_Nom, Primer_Ape, Segundo_Ape, Calle_principal, Calle_Secundaria, Sexo, Edad);
         this.Grado = Grado;
         this.Nivel_Conocimiento = Nivel_Conocimiento;
