@@ -1,7 +1,10 @@
 package Interfaces;
 
+import Clases.Representante;
+import Clases.Validaciones;
 import com.db4o.Db4o;
 import com.db4o.ObjectContainer;
+import com.db4o.ObjectSet;
 import javax.swing.JOptionPane;
 import proyectoxs.PROYECTOXS;
 
@@ -27,14 +30,16 @@ public class Registro_representante extends javax.swing.JFrame {
     public Registro_representante() {
         initComponents();
     }
-/*public void Crear_R(ObjectContainer Base) {
+    /*
+
+    public void Crear_R(ObjectContainer Base) {
         Validaciones miValidaciones = new Validaciones();
         if (validarCampos(Base)) {
 
-            Representante Rnuevo = new Representante(IDEstudiante, NombreEstudiante, ApellidoEstudiante, GeneroEstudiante, EdadEstudiante, CiudadEstudiante);
+            Representante Rnuevo = new Representante( Telefono_repre,  Correo_Electronico_repre,  Parentesco_repre,  Cedula,  Primer_nom,  Segundo_Nom,  Primer_Ape,  Segundo_Ape,  Calle_principal,  Calle_Secundaria,Sexo, Edad);
 
-            if (Comprobar_Estudiantes(basep, IDEstudiante) == 0) {
-                basep.set(Enuevo);
+            if (Comprobar_Representante(Base, Cedula) == 0) {
+                Base.set(Rnuevo);
                 JOptionPane.showMessageDialog(null, "El estudiante se guardo correctamente");
                 LimpiarCampos();
             } else {
@@ -45,11 +50,39 @@ public class Registro_representante extends javax.swing.JFrame {
             jTFidestudiante.setText("");
 
         }
-    }/*
+    }
+    
+    public static int Comprobar_Representante(ObjectContainer Base, String Cedula) {
 
-/*public boolean validarCampos(ObjectContainer Base) {
+        Representante Rbuscar = new Representante(null,  null,  null,  Cedula,  null,  null,  null,  null,  null,  null,null, 0);
+
+        ObjectSet result = Base.get(Rbuscar);
+
+        return result.size();
+    }
+
+public boolean validarCampos(ObjectContainer Base) {
         
     }
+
+public void LimpiarCampos() {
+        
+        
+        cedula_repre.setText("");
+        primernombre_repre.setText("");
+        segundonombre_repre.setText("");
+        primerapellido_repre.setText("");
+        segundoapellido_repre.setText("");
+        calleprincipal_repre.setText("");
+        callesecundaria_repre.setText("");
+        telefono_repre.setText("");;
+      correo_repre.setText("");;
+      parentesco_repre.setSelectedIndex(0);
+      edad_repre.setValue(18);
+      //shombre.clearSelection();
+
+    }
+
 
     public void asignarvariables(ObjectContainer Base) {
         Cedula = cedula_repre.getText();
@@ -63,6 +96,7 @@ public class Registro_representante extends javax.swing.JFrame {
       Correo_Electronico_repre = correo_repre.getText();;
       Parentesco_repre = parentesco_repre.getSelectedItem().toString();
       
+      
         if (shombre.isSelected()) {
             Sexo = "Hombre";
         }
@@ -72,14 +106,15 @@ public class Registro_representante extends javax.swing.JFrame {
         if (snobinario.isSelected()) {
             Sexo = "No Binario";
         }
-        Edad = (Integer) edad_repre.getValue();;
+        
+        Edad = (Integer) edad_repre.getValue();
 
     }
 
     public void cerrarBD(ObjectContainer Base) {
         Base.close();
     }
-    /*
+    */
 ////////////////////
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,6 +246,8 @@ public class Registro_representante extends javax.swing.JFrame {
         jPanel1.add(callesecundaria_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 160, -1));
         jPanel1.add(calleprincipal_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, -1));
         jPanel1.add(telefono_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 160, -1));
+
+        edad_repre.setModel(new javax.swing.SpinnerNumberModel(18, 18, 80, 1));
         jPanel1.add(edad_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
