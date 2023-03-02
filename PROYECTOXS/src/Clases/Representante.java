@@ -9,82 +9,55 @@ package Clases;
  *
  * @author Lenovo
  */
-public class Representante {
+public class Representante extends Persona {
     
-    private int Cedula;
-    private int Telefono;
-    private String Correo_Electronico;
-    private String Parentesco;
+    private int Telefono_repre;
+    private String Correo_Electronico_repre;
+    private String Parentesco_repre;
 
-    public Representante(int Cedula, int Telefono, String Correo_Electronico, String Parentesco) {
-        this.Cedula = Cedula;
-        this.Telefono = Telefono;
-        this.Correo_Electronico = Correo_Electronico;
-        this.Parentesco = Parentesco;
-    }
-    
-    
-
-    /**
-     * @return the Cedula
-     */
-    public int getCedula() {
-        return Cedula;
+    public Representante(int Telefono_repre, String Correo_Electronico_repre, String Parentesco_repre, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+        super(Cedula, Primer_nom, Segundo_Nom, Primer_Ape, Segundo_Ape, Calle_principal, Calle_Secundaria, Sexo, Edad);
+        this.Telefono_repre = Telefono_repre;
+        this.Correo_Electronico_repre = Correo_Electronico_repre;
+        this.Parentesco_repre = Parentesco_repre;
     }
 
-    /**
-     * @param Cedula the Cedula to set
-     */
-    public void setCedula(int Cedula) {
-        this.Cedula = Cedula;
+    public Representante() {
+        super();
     }
 
-    /**
-     * @return the Telefono
-     */
-    public int getTelefono() {
-        return Telefono;
+    public int getTelefono_repre() {
+        return Telefono_repre;
     }
 
-    /**
-     * @param Telefono the Telefono to set
-     */
-    public void setTelefono(int Telefono) {
-        this.Telefono = Telefono;
+    public void setTelefono_repre(int Telefono_repre) {
+        this.Telefono_repre = Telefono_repre;
     }
 
-    /**
-     * @return the Correo_Electronico
-     */
-    public String getCorreo_Electronico() {
-        return Correo_Electronico;
+    public String getCorreo_Electronico_repre() {
+        return Correo_Electronico_repre;
     }
 
-    /**
-     * @param Correo_Electronico the Correo_Electronico to set
-     */
-    public void setCorreo_Electronico(String Correo_Electronico) {
-        this.Correo_Electronico = Correo_Electronico;
+    public void setCorreo_Electronico_repre(String Correo_Electronico_repre) {
+        this.Correo_Electronico_repre = Correo_Electronico_repre;
     }
 
-    /**
-     * @return the Parentesco
-     */
-    public String getParentesco() {
-        return Parentesco;
+    public String getParentesco_repre() {
+        return Parentesco_repre;
     }
 
-    /**
-     * @param Parentesco the Parentesco to set
-     */
-    public void setParentesco(String Parentesco) {
-        this.Parentesco = Parentesco;
+    public void setParentesco_repre(String Parentesco_repre) {
+        this.Parentesco_repre = Parentesco_repre;
     }
 
     @Override
     public String toString() {
-        return "Representante{" + "Cedula=" + Cedula + ", Telefono=" + Telefono + ", Correo_Electronico=" + Correo_Electronico + ", Parentesco=" + Parentesco + '}';
+        return "Representante{" + "Telefono_repre=" + Telefono_repre + ", Correo_Electronico_repre=" + Correo_Electronico_repre + ", Parentesco_repre=" + Parentesco_repre + '}';
     }
+    
+    
+    
+
     
     
     
