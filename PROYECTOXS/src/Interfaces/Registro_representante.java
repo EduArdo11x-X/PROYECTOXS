@@ -1,24 +1,83 @@
 package Interfaces;
 
+import com.db4o.Db4o;
+import com.db4o.ObjectContainer;
 import javax.swing.JOptionPane;
+import proyectoxs.PROYECTOXS;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author EDU
- */
 public class Registro_representante extends javax.swing.JFrame {
+
+    String Cedula = "";
+    String Primer_nom = "";
+    String Segundo_Nom = "";
+    String Primer_Ape = "";
+    String Segundo_Ape = "";
+    String Calle_principal = "";
+    String Calle_Secundaria = "";
+    String Sexo = "";
+    int Edad = 0;
+     String Telefono_repre;
+     String Correo_Electronico_repre;
+     String Parentesco_repre;
 
     /**
      * Creates new form Registro_representante
      */
     public Registro_representante() {
         initComponents();
+    }
+/*public void Crear_R(ObjectContainer Base) {
+        Validaciones miValidaciones = new Validaciones();
+        if (validarCampos(Base)) {
+
+            Representante Rnuevo = new Representante(IDEstudiante, NombreEstudiante, ApellidoEstudiante, GeneroEstudiante, EdadEstudiante, CiudadEstudiante);
+
+            if (Comprobar_Estudiantes(basep, IDEstudiante) == 0) {
+                basep.set(Enuevo);
+                JOptionPane.showMessageDialog(null, "El estudiante se guardo correctamente");
+                LimpiarCampos();
+            } else {
+
+                JOptionPane.showMessageDialog(null, "El estudiante ya existe");
+            }
+
+            jTFidestudiante.setText("");
+
+        }
+    }/*
+
+/*public boolean validarCampos(ObjectContainer Base) {
+        
+    }*/
+
+    public void asignarvariables(ObjectContainer Base) {
+        Cedula = cedula_repre.getText();
+        Primer_nom = primernombre_repre.getText();
+        Segundo_Nom = segundonombre_repre.getText();
+        Primer_Ape = primerapellido_repre.getText();
+        Segundo_Ape = segundoapellido_repre.getText();
+        Calle_principal = calleprincipal_repre.getText();
+        Calle_Secundaria = callesecundaria_repre.getText();
+         Telefono_repre = telefono_repre.getText();;
+      Correo_Electronico_repre = correo_repre.getText();;
+      Parentesco_repre = parentesco_repre.getSelectedItem().toString();
+      
+        if (shombre.isSelected()) {
+            Sexo = "Hombre";
+        }
+        if (smujer.isSelected()) {
+            Sexo = "Mujer";
+        }
+        if (snobinario.isSelected()) {
+            Sexo = "No Binario";
+        }
+        Edad = (Integer) edad_repre.getValue();;
+
+    }
+
+    public void cerrarBD(ObjectContainer Base) {
+        Base.close();
     }
 
     /**
@@ -41,26 +100,28 @@ public class Registro_representante extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         primernombre_repre = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        cedula_repr = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        segundonombre_repre = new javax.swing.JTextField();
+        cedula_repre = new javax.swing.JTextField();
+        segundoapellido_repre = new javax.swing.JTextField();
+        primerapellido_repre = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        correo_repre = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jSpinner1 = new javax.swing.JSpinner();
+        callesecundaria_repre = new javax.swing.JTextField();
+        calleprincipal_repre = new javax.swing.JTextField();
+        telefono_repre = new javax.swing.JTextField();
+        edad_repre = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Guardar_repre = new javax.swing.JButton();
+        snobinario = new javax.swing.JRadioButton();
+        smujer = new javax.swing.JRadioButton();
+        shombre = new javax.swing.JRadioButton();
+        parentesco_repre = new javax.swing.JComboBox<>();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -101,27 +162,32 @@ public class Registro_representante extends javax.swing.JFrame {
         jLabel10.setText("Edad:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, 30));
         jPanel1.add(primernombre_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 150, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 150, -1));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 160, -1));
+        jPanel1.add(segundonombre_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 150, -1));
 
-        cedula_repr.addActionListener(new java.awt.event.ActionListener() {
+        cedula_repre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cedula_reprActionPerformed(evt);
+                cedula_repreActionPerformed(evt);
             }
         });
-        cedula_repr.addKeyListener(new java.awt.event.KeyAdapter() {
+        cedula_repre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                cedula_reprKeyTyped(evt);
+                cedula_repreKeyTyped(evt);
             }
         });
-        jPanel1.add(cedula_repr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 150, -1));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 150, -1));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 150, -1));
+        jPanel1.add(cedula_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 150, -1));
+        jPanel1.add(segundoapellido_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 150, -1));
+
+        primerapellido_repre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primerapellido_repreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(primerapellido_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 150, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setText("REGISTRO REPRESENTANTE");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 252, 28));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 160, -1));
+        jPanel1.add(correo_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 160, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/empleado (1).png"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 260, 320));
@@ -141,13 +207,10 @@ public class Registro_representante extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setText("Sexo:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, 20));
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 160, -1));
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, -1));
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 160, -1));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, -1));
-        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
+        jPanel1.add(callesecundaria_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 160, -1));
+        jPanel1.add(calleprincipal_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, -1));
+        jPanel1.add(telefono_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 160, -1));
+        jPanel1.add(edad_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setText("Volver");
@@ -156,7 +219,7 @@ public class Registro_representante extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 280, 100, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 100, 50));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setText("Cancelar");
@@ -165,11 +228,31 @@ public class Registro_representante extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 90, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 90, 50));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setText("Registrar Cuenta");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 140, 50));
+        Guardar_repre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Guardar_repre.setText("Registrar Cuenta");
+        Guardar_repre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Guardar_repreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Guardar_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 140, 50));
+
+        snobinario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        snobinario.setText("No Binario");
+        jPanel1.add(snobinario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 100, -1));
+
+        smujer.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        smujer.setText("Mujer");
+        jPanel1.add(smujer, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 70, -1));
+
+        shombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        shombre.setText("Hombre");
+        jPanel1.add(shombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 80, -1));
+
+        parentesco_repre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Padre", "Madre", "Hermano", "Tio", "Tia", "Abuelo", "Abuela" }));
+        jPanel1.add(parentesco_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -189,46 +272,55 @@ public class Registro_representante extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void cedula_reprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedula_reprActionPerformed
-boolean resultado;
-
-
+    private void cedula_repreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedula_repreActionPerformed
+        boolean resultado;
 
 // TODO add your handling code here:
-    }//GEN-LAST:event_cedula_reprActionPerformed
+
+    }//GEN-LAST:event_cedula_repreActionPerformed
+
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
-        Eleccion_rol vsar1 = new Eleccion_rol ();
+        Eleccion_rol vsar1 = new Eleccion_rol();
         vsar1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void Guardar_repreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar_repreActionPerformed
+        ObjectContainer Base = Db4o.openFile(PROYECTOXS.direccionBD);
+
+        //Crear_E(BaseD);
+        //Cerrar_BD(BaseD);        // TODO add your handling code here:
+    }//GEN-LAST:event_Guardar_repreActionPerformed
+
+    private void cedula_repreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedula_repreKeyTyped
+        char aux = evt.getKeyChar();
+        boolean numeros = aux >= 48 && aux <= 57;
+        if (numeros == false) {
+            System.out.println("Ingrese solo numeros" + evt.getKeyChar());
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_cedula_repreKeyTyped
+
+    private void primerapellido_repreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primerapellido_repreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void cedula_reprKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedula_reprKeyTyped
-char aux = evt.getKeyChar();
-boolean numeros = aux>=48 && aux<=57;
-if(numeros==false){
-    System.out.println("Ingrese solo numeros" + evt.getKeyChar());
-    evt.consume();
-}
-
-    }//GEN-LAST:event_cedula_reprKeyTyped
-
+    }//GEN-LAST:event_primerapellido_repreActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField cedula_repr;
+    private javax.swing.JButton Guardar_repre;
+    private javax.swing.JTextField calleprincipal_repre;
+    private javax.swing.JTextField callesecundaria_repre;
+    private javax.swing.JTextField cedula_repre;
+    private javax.swing.JTextField correo_repre;
+    private javax.swing.JSpinner edad_repre;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -244,15 +336,14 @@ if(numeros==false){
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JComboBox<String> parentesco_repre;
+    private javax.swing.JTextField primerapellido_repre;
     private javax.swing.JTextField primernombre_repre;
+    private javax.swing.JTextField segundoapellido_repre;
+    private javax.swing.JTextField segundonombre_repre;
+    private javax.swing.JRadioButton shombre;
+    private javax.swing.JRadioButton smujer;
+    private javax.swing.JRadioButton snobinario;
+    private javax.swing.JTextField telefono_repre;
     // End of variables declaration//GEN-END:variables
 }

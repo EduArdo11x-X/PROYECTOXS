@@ -16,7 +16,7 @@ public class Administrador extends Persona{
     private int Telefono_admi;
     private String Especializacion_admi;
 
-    public Administrador(String Tiulo_admi, String Correo_Electronico_admi, int Telefono_admi, String Especializacion_admi, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+    public Administrador(String Tiulo_admi, String Correo_Electronico_admi, int Telefono_admi, String Especializacion_admi, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, String Sexo, int Edad) {
         super(Cedula, Primer_nom, Segundo_Nom, Primer_Ape, Segundo_Ape, Calle_principal, Calle_Secundaria, Sexo, Edad);
         this.Tiulo_admi = Tiulo_admi;
         this.Correo_Electronico_admi = Correo_Electronico_admi;
