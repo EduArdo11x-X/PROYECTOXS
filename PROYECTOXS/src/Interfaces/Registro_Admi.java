@@ -5,19 +5,45 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+import Clases.Validaciones;
+
 /**
  *
  * @author HP
  */
 public class Registro_Admi extends javax.swing.JFrame {
 
+    
+    String ced_admi = "";
+    
+    public void asignarVariables() {
+        ced_admi = txtcedula_admi.getText();
+      
+    }
     /**
      * Creates new form Registro_Admi
      */
     public Registro_Admi() {
         initComponents();
     }
-
+    
+    public boolean validarCampos() {
+    Validaciones miValidaciones = new Validaciones();
+    boolean ban_confirmar = true;
+    
+    
+    if (txtcedula_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese una Cedula");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarid(ced_admi)) {
+                JOptionPane.showMessageDialog(this, "Cedula invalida");
+                ban_confirmar = false;
+            }
+        }
+        return ban_confirmar;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
