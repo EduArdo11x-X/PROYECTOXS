@@ -34,12 +34,12 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        cedula = new javax.swing.JTextField();
-        nombre1 = new javax.swing.JTextField();
-        nombre2 = new javax.swing.JTextField();
-        apellido1 = new javax.swing.JTextField();
-        apellido2 = new javax.swing.JTextField();
-        dir1 = new javax.swing.JTextField();
+        txtcedula_admi = new javax.swing.JTextField();
+        txtprimernombre_admi = new javax.swing.JTextField();
+        txtsegundonombre_admi = new javax.swing.JTextField();
+        txtprimerapellido_admi = new javax.swing.JTextField();
+        txtsegundoapellido_admi = new javax.swing.JTextField();
+        txtdireccionprincipal_admi = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -48,17 +48,17 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        dir2 = new javax.swing.JTextField();
-        titulo = new javax.swing.JTextField();
-        telf = new javax.swing.JTextField();
-        correo = new javax.swing.JTextField();
-        sexo = new javax.swing.JComboBox<>();
-        contra = new javax.swing.JPasswordField();
-        contra2 = new javax.swing.JPasswordField();
-        edad = new javax.swing.JSpinner();
-        registrar = new javax.swing.JButton();
-        cancelar = new javax.swing.JButton();
-        volver = new javax.swing.JButton();
+        txtdireccionsecundaria_admi = new javax.swing.JTextField();
+        txttitulo_admi = new javax.swing.JTextField();
+        txttelefono_admi = new javax.swing.JTextField();
+        txtcorreo_admi = new javax.swing.JTextField();
+        txtsexo_admi = new javax.swing.JComboBox<>();
+        txtcontraseña_admi = new javax.swing.JPasswordField();
+        txtconfirmarcontraseña_admi = new javax.swing.JPasswordField();
+        spinneredad_admi = new javax.swing.JSpinner();
+        botonregistrarcuenta_admi = new javax.swing.JButton();
+        botoncancelar_admi = new javax.swing.JButton();
+        botonvolver_admi = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,25 +89,25 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Direcciòn c/Principal : ");
 
-        cedula.setText("0150631463");
-        cedula.addActionListener(new java.awt.event.ActionListener() {
+        txtcedula_admi.setText("0150631463");
+        txtcedula_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cedulaActionPerformed(evt);
+                txtcedula_admiActionPerformed(evt);
             }
         });
 
-        nombre1.setText("Mariuxi");
+        txtprimernombre_admi.setText("Mariuxi");
 
-        nombre2.setText("Andrea");
+        txtsegundonombre_admi.setText("Andrea");
 
-        apellido1.setText("Calle");
+        txtprimerapellido_admi.setText("Calle");
 
-        apellido2.setText("Dumaguala");
+        txtsegundoapellido_admi.setText("Dumaguala");
 
-        dir1.setText("tixan");
-        dir1.addActionListener(new java.awt.event.ActionListener() {
+        txtdireccionprincipal_admi.setText("tixan");
+        txtdireccionprincipal_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dir1ActionPerformed(evt);
+                txtdireccionprincipal_admiActionPerformed(evt);
             }
         });
 
@@ -143,28 +143,28 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Confirmar Contraseña : ");
 
-        dir2.setText("Ochoa Leon");
+        txtdireccionsecundaria_admi.setText("Ochoa Leon");
 
-        titulo.setText("Psicologo");
+        txttitulo_admi.setText("Psicologo");
 
-        telf.setText("453454");
+        txttelefono_admi.setText("453454");
 
-        correo.setText("andreacalle888@gmail.com");
+        txtcorreo_admi.setText("andreacalle888@gmail.com");
 
-        sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
+        txtsexo_admi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
 
-        contra.setText("jPasswordField1");
+        txtcontraseña_admi.setText("jPasswordField1");
 
-        contra2.setText("jPasswordField2");
+        txtconfirmarcontraseña_admi.setText("jPasswordField2");
 
-        registrar.setText("Registrar Cuenta");
+        botonregistrarcuenta_admi.setText("Registrar Cuenta");
 
-        cancelar.setText("Cancelar");
+        botoncancelar_admi.setText("Cancelar");
 
-        volver.setText("Volver");
-        volver.addActionListener(new java.awt.event.ActionListener() {
+        botonvolver_admi.setText("Volver");
+        botonvolver_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverActionPerformed(evt);
+                botonvolver_admiActionPerformed(evt);
             }
         });
 
@@ -187,20 +187,20 @@ public class Registro_Admi extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtprimernombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cedula, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                                    .addComponent(nombre2)
-                                    .addComponent(apellido1)
-                                    .addComponent(apellido2))))
+                                    .addComponent(txtcedula_admi, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                                    .addComponent(txtsegundonombre_admi)
+                                    .addComponent(txtprimerapellido_admi)
+                                    .addComponent(txtsegundoapellido_admi))))
                         .addGap(138, 138, 138)
-                        .addComponent(registrar)
+                        .addComponent(botonregistrarcuenta_admi)
                         .addGap(46, 46, 46)
-                        .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(volver))
+                        .addComponent(botonvolver_admi))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(87, 87, 87)
@@ -219,16 +219,16 @@ public class Registro_Admi extends javax.swing.JFrame {
                                 .addGap(131, 131, 131)))
                         .addGap(45, 45, 45)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contra2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtconfirmarcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(contra)
-                                .addComponent(dir2)
-                                .addComponent(dir1)
-                                .addComponent(titulo)
-                                .addComponent(telf)
-                                .addComponent(sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(correo, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))))
+                                .addComponent(txtcontraseña_admi)
+                                .addComponent(txtdireccionsecundaria_admi)
+                                .addComponent(txtdireccionprincipal_admi)
+                                .addComponent(txttitulo_admi)
+                                .addComponent(txttelefono_admi)
+                                .addComponent(txtsexo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(spinneredad_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtcorreo_admi, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -239,64 +239,64 @@ public class Registro_Admi extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(40, 40, 40)
-                                .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(spinneredad_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel12)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtsexo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txttitulo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
-                            .addComponent(telf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txttelefono_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtcorreo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dir1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtdireccionprincipal_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(dir2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtdireccionsecundaria_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtcedula_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14)
-                    .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtprimernombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15)
-                    .addComponent(contra2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtconfirmarcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtsegundonombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtprimerapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(apellido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(volver, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtsegundoapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonregistrarcuenta_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonvolver_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -314,19 +314,19 @@ public class Registro_Admi extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaActionPerformed
+    private void txtcedula_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedula_admiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cedulaActionPerformed
+    }//GEN-LAST:event_txtcedula_admiActionPerformed
 
-    private void dir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dir1ActionPerformed
+    private void txtdireccionprincipal_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionprincipal_admiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dir1ActionPerformed
+    }//GEN-LAST:event_txtdireccionprincipal_admiActionPerformed
 
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+    private void botonvolver_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonvolver_admiActionPerformed
         this.dispose();
         Eleccion_rol vsar1 = new Eleccion_rol ();
         vsar1.setVisible(true);
-    }//GEN-LAST:event_volverActionPerformed
+    }//GEN-LAST:event_botonvolver_admiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,16 +334,9 @@ public class Registro_Admi extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField apellido1;
-    private javax.swing.JTextField apellido2;
-    private javax.swing.JButton cancelar;
-    private javax.swing.JTextField cedula;
-    private javax.swing.JPasswordField contra;
-    private javax.swing.JPasswordField contra2;
-    private javax.swing.JTextField correo;
-    private javax.swing.JTextField dir1;
-    private javax.swing.JTextField dir2;
-    private javax.swing.JSpinner edad;
+    private javax.swing.JButton botoncancelar_admi;
+    private javax.swing.JButton botonregistrarcuenta_admi;
+    private javax.swing.JButton botonvolver_admi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -360,12 +353,19 @@ public class Registro_Admi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombre1;
-    private javax.swing.JTextField nombre2;
-    private javax.swing.JButton registrar;
-    private javax.swing.JComboBox<String> sexo;
-    private javax.swing.JTextField telf;
-    private javax.swing.JTextField titulo;
-    private javax.swing.JButton volver;
+    private javax.swing.JSpinner spinneredad_admi;
+    private javax.swing.JTextField txtcedula_admi;
+    private javax.swing.JPasswordField txtconfirmarcontraseña_admi;
+    private javax.swing.JPasswordField txtcontraseña_admi;
+    private javax.swing.JTextField txtcorreo_admi;
+    private javax.swing.JTextField txtdireccionprincipal_admi;
+    private javax.swing.JTextField txtdireccionsecundaria_admi;
+    private javax.swing.JTextField txtprimerapellido_admi;
+    private javax.swing.JTextField txtprimernombre_admi;
+    private javax.swing.JTextField txtsegundoapellido_admi;
+    private javax.swing.JTextField txtsegundonombre_admi;
+    private javax.swing.JComboBox<String> txtsexo_admi;
+    private javax.swing.JTextField txttelefono_admi;
+    private javax.swing.JTextField txttitulo_admi;
     // End of variables declaration//GEN-END:variables
 }

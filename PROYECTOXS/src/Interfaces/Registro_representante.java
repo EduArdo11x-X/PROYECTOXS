@@ -211,9 +211,8 @@ boolean resultado;
 char aux = evt.getKeyChar();
 boolean numeros = aux>=48 && aux<=57;
 if(numeros==false){
-    System.out.println("Esta digitando" + evt.getKeyChar());
+    System.out.println("Ingrese solo numeros" + evt.getKeyChar());
     evt.consume();
-
 }
 
     }//GEN-LAST:event_cedula_reprKeyTyped
