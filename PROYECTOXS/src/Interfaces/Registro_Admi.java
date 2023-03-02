@@ -16,9 +16,18 @@ public class Registro_Admi extends javax.swing.JFrame {
 
     
     String ced_admi = "";
+    String nom_admi = "";
+    String nom2_admi = "";
+    String apellido_admi = "";
+    String apellido2_admi = "";
+    
     
     public void asignarVariables() {
         ced_admi = txtcedula_admi.getText();
+        nom_admi = txtprimernombre_admi.getText();
+        nom2_admi = txtsegundonombre_admi.getText();
+        apellido_admi = txtprimerapellido_admi.getText();
+                apellido2_admi = txtsegundoapellido_admi.getText();
       
     }
     /**
@@ -39,6 +48,44 @@ public class Registro_Admi extends javax.swing.JFrame {
         } else {
             if (!miValidaciones.validarid(ced_admi)) {
                 JOptionPane.showMessageDialog(this, "Cedula invalida");
+                ban_confirmar = false;
+            }
+        }
+    
+    if (txtprimernombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+     if (txtsegundonombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom2_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+      if (txtprimerapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
+                ban_confirmar = false;
+            }
+        }
+      
+       if (txtsegundoapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido2_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
                 ban_confirmar = false;
             }
         }
