@@ -49,7 +49,7 @@ public class Registro_representante extends javax.swing.JFrame {
 
 /*public boolean validarCampos(ObjectContainer Base) {
         
-    }*/
+    }
 
     public void asignarvariables(ObjectContainer Base) {
         Cedula = cedula_repre.getText();
@@ -79,7 +79,8 @@ public class Registro_representante extends javax.swing.JFrame {
     public void cerrarBD(ObjectContainer Base) {
         Base.close();
     }
-
+    /*
+////////////////////
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -287,7 +288,7 @@ public class Registro_representante extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void Guardar_repreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar_repreActionPerformed
-        ObjectContainer Base = Db4o.openFile(PROYECTOXS.direccionBD);
+        //ObjectContainer Base = Db4o.openFile(PROYECTOXS.direccionBD);
 
         //Crear_E(BaseD);
         //Cerrar_BD(BaseD);        // TODO add your handling code here:
@@ -303,6 +304,8 @@ public class Registro_representante extends javax.swing.JFrame {
 
     }//GEN-LAST:event_cedula_repreKeyTyped
 
+    
+    
     private void primerapellido_repreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primerapellido_repreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_primerapellido_repreActionPerformed
