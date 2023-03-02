@@ -11,47 +11,33 @@ package Clases;
  */
 public class Plataforma {
     
-private int Codigo_Registro;
-    private int Cedula;
+private String Codigo_Registro_plat;
 
-    public Plataforma(int Codigo_Registro, int Cedula) {
-        this.Codigo_Registro = Codigo_Registro;
-        this.Cedula = Cedula;
+    public Plataforma(String Codigo_Registro_plat) {
+        this.Codigo_Registro_plat = Codigo_Registro_plat;
     }
 
-    /**
-     * @return the Codigo_Registro
-     */
-    public int getCodigo_Registro() {
-        return Codigo_Registro;
+    public Plataforma() {
     }
 
-    /**
-     * @param Codigo_Registro the Codigo_Registro to set
-     */
-    public void setCodigo_Registro(int Codigo_Registro) {
-        this.Codigo_Registro = Codigo_Registro;
+    public String getCodigo_Registro_plat() {
+        return Codigo_Registro_plat;
     }
 
-    /**
-     * @return the Cedula
-     */
-    public int getCedula() {
-        return Cedula;
-    }
-
-    /**
-     * @param Cedula the Cedula to set
-     */
-    public void setCedula(int Cedula) {
-        this.Cedula = Cedula;
+    public void setCodigo_Registro_plat(String Codigo_Registro_plat) {
+        this.Codigo_Registro_plat = Codigo_Registro_plat;
     }
 
     @Override
     public String toString() {
-        return "Plataforma{" + "Codigo_Registro=" + Codigo_Registro + ", Cedula=" + Cedula + '}';
+        return "Plataforma{" + "Codigo_Registro_plat=" + Codigo_Registro_plat + '}';
     }
-    
+
+
+
+
+
+
     
     
 }

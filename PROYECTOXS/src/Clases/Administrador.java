@@ -9,96 +9,66 @@ package Clases;
  *
  * @author Lenovo
  */
-public class Administrador {
+public class Administrador extends Persona{
     
-private int Cedula;
-    private String Tiulo;
-    private String Correo_Electronico;
-    private int Telefono;
-    private String Especializacion;
+    private String Tiulo_admi;
+    private String Correo_Electronico_admi;
+    private int Telefono_admi;
+    private String Especializacion_admi;
 
-    public Administrador(int Cedula, String Tiulo, String Correo_Electronico, int Telefono, String Especializacion) {
-        this.Cedula = Cedula;
-        this.Tiulo = Tiulo;
-        this.Correo_Electronico = Correo_Electronico;
-        this.Telefono = Telefono;
-        this.Especializacion = Especializacion;
+    public Administrador(String Tiulo_admi, String Correo_Electronico_admi, int Telefono_admi, String Especializacion_admi, String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+        super(Cedula, Primer_nom, Segundo_Nom, Primer_Ape, Segundo_Ape, Calle_principal, Calle_Secundaria, Sexo, Edad);
+        this.Tiulo_admi = Tiulo_admi;
+        this.Correo_Electronico_admi = Correo_Electronico_admi;
+        this.Telefono_admi = Telefono_admi;
+        this.Especializacion_admi = Especializacion_admi;
     }
 
-    /**
-     * @return the Cedula
-     */
-    public int getCedula() {
-        return Cedula;
+    public Administrador() {
+        super();
     }
 
-    /**
-     * @param Cedula the Cedula to set
-     */
-    public void setCedula(int Cedula) {
-        this.Cedula = Cedula;
+    public String getTiulo_admi() {
+        return Tiulo_admi;
     }
 
-    /**
-     * @return the Tiulo
-     */
-    public String getTiulo() {
-        return Tiulo;
+    public void setTiulo_admi(String Tiulo_admi) {
+        this.Tiulo_admi = Tiulo_admi;
     }
 
-    /**
-     * @param Tiulo the Tiulo to set
-     */
-    public void setTiulo(String Tiulo) {
-        this.Tiulo = Tiulo;
+    public String getCorreo_Electronico_admi() {
+        return Correo_Electronico_admi;
     }
 
-    /**
-     * @return the Correo_Electronico
-     */
-    public String getCorreo_Electronico() {
-        return Correo_Electronico;
+    public void setCorreo_Electronico_admi(String Correo_Electronico_admi) {
+        this.Correo_Electronico_admi = Correo_Electronico_admi;
     }
 
-    /**
-     * @param Correo_Electronico the Correo_Electronico to set
-     */
-    public void setCorreo_Electronico(String Correo_Electronico) {
-        this.Correo_Electronico = Correo_Electronico;
+    public int getTelefono_admi() {
+        return Telefono_admi;
     }
 
-    /**
-     * @return the Telefono
-     */
-    public int getTelefono() {
-        return Telefono;
+    public void setTelefono_admi(int Telefono_admi) {
+        this.Telefono_admi = Telefono_admi;
     }
 
-    /**
-     * @param Telefono the Telefono to set
-     */
-    public void setTelefono(int Telefono) {
-        this.Telefono = Telefono;
+    public String getEspecializacion_admi() {
+        return Especializacion_admi;
     }
 
-    /**
-     * @return the Especializacion
-     */
-    public String getEspecializacion() {
-        return Especializacion;
-    }
-
-    /**
-     * @param Especializacion the Especializacion to set
-     */
-    public void setEspecializacion(String Especializacion) {
-        this.Especializacion = Especializacion;
+    public void setEspecializacion_admi(String Especializacion_admi) {
+        this.Especializacion_admi = Especializacion_admi;
     }
 
     @Override
     public String toString() {
-        return "Administrador{" + "Cedula=" + Cedula + ", Tiulo=" + Tiulo + ", Correo_Electronico=" + Correo_Electronico + ", Telefono=" + Telefono + ", Especializacion=" + Especializacion + '}';
+        return "Administrador{" + "Tiulo_admi=" + Tiulo_admi + ", Correo_Electronico_admi=" + Correo_Electronico_admi + ", Telefono_admi=" + Telefono_admi + ", Especializacion_admi=" + Especializacion_admi + '}';
     }
+    
+    
+
+    
+    
 
 }
 
