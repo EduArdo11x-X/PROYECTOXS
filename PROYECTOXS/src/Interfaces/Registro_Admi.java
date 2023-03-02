@@ -5,19 +5,92 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+import Clases.Validaciones;
+
 /**
  *
  * @author HP
  */
 public class Registro_Admi extends javax.swing.JFrame {
 
+    
+    String ced_admi = "";
+    String nom_admi = "";
+    String nom2_admi = "";
+    String apellido_admi = "";
+    String apellido2_admi = "";
+    
+    
+    public void asignarVariables() {
+        ced_admi = txtcedula_admi.getText();
+        nom_admi = txtprimernombre_admi.getText();
+        nom2_admi = txtsegundonombre_admi.getText();
+        apellido_admi = txtprimerapellido_admi.getText();
+                apellido2_admi = txtsegundoapellido_admi.getText();
+      
+    }
     /**
      * Creates new form Registro_Admi
      */
     public Registro_Admi() {
         initComponents();
     }
-
+    
+    public boolean validarCampos() {
+    Validaciones miValidaciones = new Validaciones();
+    boolean ban_confirmar = true;
+    
+    
+    if (txtcedula_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese una Cedula");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarid(ced_admi)) {
+                JOptionPane.showMessageDialog(this, "Cedula invalida");
+                ban_confirmar = false;
+            }
+        }
+    
+    if (txtprimernombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+     if (txtsegundonombre_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Nombre");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(nom2_admi)) {
+                JOptionPane.showMessageDialog(this, "Nombre invalido");
+                ban_confirmar = false;
+            }
+        }
+      if (txtprimerapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Primer Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
+                ban_confirmar = false;
+            }
+        }
+      
+       if (txtsegundoapellido_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Segundo Apellido");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarNomApe(apellido2_admi)) {
+                JOptionPane.showMessageDialog(this, "Apellido invalido");
+                ban_confirmar = false;
+            }
+        }
+        return ban_confirmar;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -148,6 +221,11 @@ public class Registro_Admi extends javax.swing.JFrame {
         txttitulo_admi.setText("Psicologo");
 
         txttelefono_admi.setText("453454");
+        txttelefono_admi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttelefono_admiActionPerformed(evt);
+            }
+        });
 
         txtcorreo_admi.setText("andreacalle888@gmail.com");
 
@@ -157,10 +235,13 @@ public class Registro_Admi extends javax.swing.JFrame {
 
         txtconfirmarcontraseña_admi.setText("jPasswordField2");
 
+        botonregistrarcuenta_admi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/registro.png"))); // NOI18N
         botonregistrarcuenta_admi.setText("Registrar Cuenta");
 
+        botoncancelar_admi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/cNCELAR.png"))); // NOI18N
         botoncancelar_admi.setText("Cancelar");
 
+        botonvolver_admi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/REGRESAR1.jpg"))); // NOI18N
         botonvolver_admi.setText("Volver");
         botonvolver_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,42 +275,46 @@ public class Registro_Admi extends javax.swing.JFrame {
                                     .addComponent(txtcedula_admi, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                                     .addComponent(txtsegundonombre_admi)
                                     .addComponent(txtprimerapellido_admi)
-                                    .addComponent(txtsegundoapellido_admi))))
-                        .addGap(138, 138, 138)
-                        .addComponent(botonregistrarcuenta_admi)
-                        .addGap(46, 46, 46)
-                        .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(botonvolver_admi))
+                                    .addComponent(txtsegundoapellido_admi)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel10)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel14)
-                                .addComponent(jLabel15))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(131, 131, 131)))
-                        .addGap(45, 45, 45)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtconfirmarcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtcontraseña_admi)
-                                .addComponent(txtdireccionsecundaria_admi)
-                                .addComponent(txtdireccionprincipal_admi)
-                                .addComponent(txttitulo_admi)
-                                .addComponent(txttelefono_admi)
-                                .addComponent(txtsexo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(spinneredad_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtcorreo_admi, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))))
-                .addContainerGap(37, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel13)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel10)
+                                            .addComponent(jLabel11)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel14)
+                                            .addComponent(jLabel15))
+                                        .addGap(155, 155, 155))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(botonregistrarcuenta_admi)
+                                        .addGap(39, 39, 39)
+                                        .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)))
+                                .addComponent(botonvolver_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(jLabel12)
+                                .addGap(214, 214, 214)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtconfirmarcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtcontraseña_admi)
+                                        .addComponent(txtdireccionsecundaria_admi)
+                                        .addComponent(txtdireccionprincipal_admi)
+                                        .addComponent(txttitulo_admi)
+                                        .addComponent(txttelefono_admi)
+                                        .addComponent(txtsexo_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(spinneredad_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtcorreo_admi, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,33 +367,44 @@ public class Registro_Admi extends javax.swing.JFrame {
                     .addComponent(txtprimernombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15)
                     .addComponent(txtconfirmarcontraseña_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtsegundonombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtprimerapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtsegundoapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonregistrarcuenta_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonvolver_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(txtsegundonombre_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(txtprimerapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(txtsegundoapellido_admi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(77, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(botonregistrarcuenta_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botoncancelar_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonvolver_admi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -327,6 +423,10 @@ public class Registro_Admi extends javax.swing.JFrame {
         Eleccion_rol vsar1 = new Eleccion_rol ();
         vsar1.setVisible(true);
     }//GEN-LAST:event_botonvolver_admiActionPerformed
+
+    private void txttelefono_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelefono_admiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttelefono_admiActionPerformed
 
     /**
      * @param args the command line arguments
