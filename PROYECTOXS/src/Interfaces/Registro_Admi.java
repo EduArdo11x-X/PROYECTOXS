@@ -148,6 +148,11 @@ public class Registro_Admi extends javax.swing.JFrame {
         txttitulo_admi.setText("Psicologo");
 
         txttelefono_admi.setText("453454");
+        txttelefono_admi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttelefono_admiActionPerformed(evt);
+            }
+        });
 
         txtcorreo_admi.setText("andreacalle888@gmail.com");
 
@@ -345,6 +350,10 @@ public class Registro_Admi extends javax.swing.JFrame {
         Eleccion_rol vsar1 = new Eleccion_rol ();
         vsar1.setVisible(true);
     }//GEN-LAST:event_botonvolver_admiActionPerformed
+
+    private void txttelefono_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelefono_admiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttelefono_admiActionPerformed
 
     /**
      * @param args the command line arguments
