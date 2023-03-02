@@ -331,7 +331,13 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
         // TODO add your handling code here:
+
+        this.dispose();
+            Registro_representante vsar1 = new Registro_representante  ();
+            vsar1.setVisible(true);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
