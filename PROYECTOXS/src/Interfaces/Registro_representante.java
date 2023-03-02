@@ -50,7 +50,7 @@ public class Registro_representante extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "El estudiante ya existe");
             }
 
-            jTFidestudiante.setText("");
+            cedula_repre.setText("");
 
         }
     }
@@ -65,9 +65,128 @@ public class Registro_representante extends javax.swing.JFrame {
     }
 
 public boolean validarCampos(ObjectContainer Base) {
-        
+    
+    Validaciones miValidaciones = new Validaciones;
+    signarvariables(ObjectContainer Base);
+    
+    boolean confirmar = true;
+    
+    if(cedula_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese la cedula del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarCedula(Cedula)){
+    JOptionPane.showMessageDialog(this, "Cedula invalido");
+    
+    confirmar = false;  
+    }   
     }
-
+    
+    if(primernombre_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el primer nombre del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Primer_nom)){
+    JOptionPane.showMessageDialog(this, "Nombre invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(segundonombre_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el segundo nombre del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Segundo_Nom)){
+    JOptionPane.showMessageDialog(this, "Nombre invalido");
+    
+    confirmar = false;
+    }   
+    }
+    
+    
+    if(primerapellido_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el primer apellido del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Primer_Ape)){
+    JOptionPane.showMessageDialog(this, "Apellido invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    
+    if(segundoapellido_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el segundo apellido del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Segundo_Ape)){
+    JOptionPane.showMessageDialog(this, "Nombre invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(calleprincipal_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese la direccion de la calle principal del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Calle_principal)){
+    JOptionPane.showMessageDialog(this, "Direccion de la calle principal invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(callesecundaria_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese la direccion de la calle secundaria del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarNomApe(Calle_Secundaria)){
+    JOptionPane.showMessageDialog(this, "Direcion de la calle secundaria invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(telefono_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el telefono del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarCedula(Telefono_repre)){
+    JOptionPane.showMessageDialog(this, "Telefono invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(correo_repre.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Ingrese el correo del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarCorreo(Correo_Electronico_repre)){
+    JOptionPane.showMessageDialog(this, "Correo invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    if(parentesco_repre.getSelectedIndex()==0){
+    JOptionPane.showMessageDialog(this, "Ingrese el parentesco del representante");
+    confirmar = false;
+    } else {
+    if(!miValidaciones.validarParentesco(Parentesco_repre)){
+    JOptionPane.showMessageDialog(this, "Parentesco invalido");
+    
+    confirmar = false;  
+    }   
+    }
+    
+    return confirmar;
+    
+    
+    }
 public void LimpiarCampos() {
         
         
@@ -95,8 +214,8 @@ public void LimpiarCampos() {
         Segundo_Ape = segundoapellido_repre.getText();
         Calle_principal = calleprincipal_repre.getText();
         Calle_Secundaria = callesecundaria_repre.getText();
-         Telefono_repre = telefono_repre.getText();;
-      Correo_Electronico_repre = correo_repre.getText();;
+         Telefono_repre = telefono_repre.getText();
+      Correo_Electronico_repre = correo_repre.getText();
       Parentesco_repre = parentesco_repre.getSelectedItem().toString();
       
       
