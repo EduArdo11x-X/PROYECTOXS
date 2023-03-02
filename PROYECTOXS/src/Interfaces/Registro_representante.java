@@ -254,31 +254,34 @@ public void LimpiarCampos() {
         jPanel1.add(edad_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/REGRESAR1.jpg"))); // NOI18N
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 100, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 120, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/cNCELAR.png"))); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 90, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, 130, 40));
 
         Guardar_repre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Guardar_repre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/registro.png"))); // NOI18N
         Guardar_repre.setText("Registrar Cuenta");
         Guardar_repre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Guardar_repreActionPerformed(evt);
             }
         });
-        jPanel1.add(Guardar_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 140, 50));
+        jPanel1.add(Guardar_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 180, 40));
 
         snobinario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         snobinario.setText("No Binario");
