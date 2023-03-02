@@ -29,8 +29,11 @@ public class Pag_adm extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,10 +42,26 @@ public class Pag_adm extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/Diseño sin título (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-230, -410, 1130, 920));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 142, -1, 100));
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/inicio r.png"))); // NOI18N
         jMenu1.setText("Inicio");
         jMenu1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/-formulario.png"))); // NOI18N
+        jMenu3.setText("Registrar ");
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/añadir usuario.png"))); // NOI18N
+        jMenuItem1.setText("Nuevo Usuario");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenu1.add(jMenu3);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -63,6 +82,10 @@ public class Pag_adm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,7 +129,10 @@ public class Pag_adm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
