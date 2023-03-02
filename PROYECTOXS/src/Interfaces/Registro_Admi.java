@@ -235,6 +235,7 @@ public class Registro_Admi extends javax.swing.JFrame {
 
         txtconfirmarcontraseña_admi.setText("jPasswordField2");
 
+        botonregistrarcuenta_admi.setBackground(new java.awt.Color(0, 102, 102));
         botonregistrarcuenta_admi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/registro.png"))); // NOI18N
         botonregistrarcuenta_admi.setText("Registrar Cuenta");
 
@@ -401,9 +402,7 @@ public class Registro_Admi extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
