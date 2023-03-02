@@ -120,6 +120,11 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
         });
 
         jButton4.setText("Continuar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setText("Segundo Apellido : ");
@@ -320,6 +325,12 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
             Pag_adm vsar1 = new Pag_adm ();
             vsar1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+            Registro_representante vsar1 = new Registro_representante  ();
+            vsar1.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
