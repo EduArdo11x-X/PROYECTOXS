@@ -11,17 +11,17 @@ package Clases;
  */
 public class Persona {
     
-    private int Cedula;
+    private String Cedula;
     private String Primer_nom;
     private String Segundo_Nom;
     private String Primer_Ape;
     private String Segundo_Ape;
     private String Calle_principal;
     private String Calle_Secundaria;
-    private char Sexo;
+    private String Sexo;
     private int Edad;
 
-    public Persona(int Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, char Sexo, int Edad) {
+    public Persona(String Cedula, String Primer_nom, String Segundo_Nom, String Primer_Ape, String Segundo_Ape, String Calle_principal, String Calle_Secundaria, String Sexo, int Edad) {
         this.Cedula = Cedula;
         this.Primer_nom = Primer_nom;
         this.Segundo_Nom = Segundo_Nom;
@@ -33,11 +33,14 @@ public class Persona {
         this.Edad = Edad;
     }
 
-    public int getCedula() {
+    public Persona() {
+    }
+
+    public String getCedula() {
         return Cedula;
     }
 
-    public void setCedula(int Cedula) {
+    public void setCedula(String Cedula) {
         this.Cedula = Cedula;
     }
 
@@ -89,11 +92,11 @@ public class Persona {
         this.Calle_Secundaria = Calle_Secundaria;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return Sexo;
     }
 
-    public void setSexo(char Sexo) {
+    public void setSexo(String Sexo) {
         this.Sexo = Sexo;
     }
 
@@ -109,6 +112,7 @@ public class Persona {
     public String toString() {
         return "Persona{" + "Cedula=" + Cedula + ", Primer_nom=" + Primer_nom + ", Segundo_Nom=" + Segundo_Nom + ", Primer_Ape=" + Primer_Ape + ", Segundo_Ape=" + Segundo_Ape + ", Calle_principal=" + Calle_principal + ", Calle_Secundaria=" + Calle_Secundaria + ", Sexo=" + Sexo + ", Edad=" + Edad + '}';
     }
-
     
+    
+
 }

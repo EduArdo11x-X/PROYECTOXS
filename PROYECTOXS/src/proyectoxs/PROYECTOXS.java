@@ -5,19 +5,20 @@
  */
 package proyectoxs;
 
-/**
- *
- * @author EDU
- */
+//import com.db4o.*;
+
+import Interfaces.Inicio;
+
 public class PROYECTOXS {
 
-    /**
-     * @param args the command line arguments
-     */
+    //COLOCAR LA DIRECCION DE LA BASE DE DATOS
+    //public static String direccionBD="Users\\EDU\\Documents\\GitHub\\PROYECTOXS\\BD\\\\BD.PROYECTO.yap";
+//
     public static void main(String[] args) {
-        System.out.println("FREEDY INFIEL");
-        System.out.println("Holasoy yo de nuevo");
-        // TODO code application logic here
+   Inicio mostrarInicio = new Inicio();
+   mostrarInicio.setVisible(true);
+        
+       
     }
     
 }
