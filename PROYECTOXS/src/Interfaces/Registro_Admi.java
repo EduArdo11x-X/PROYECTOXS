@@ -20,6 +20,8 @@ public class Registro_Admi extends javax.swing.JFrame {
     String nom2_admi = "";
     String apellido_admi = "";
     String apellido2_admi = "";
+    String CallePrin = "";
+    String CalleSec = "";
     
     
     public void asignarVariables() {
@@ -28,6 +30,8 @@ public class Registro_Admi extends javax.swing.JFrame {
         nom2_admi = txtsegundonombre_admi.getText();
         apellido_admi = txtprimerapellido_admi.getText();
                 apellido2_admi = txtsegundoapellido_admi.getText();
+                CallePrin = txtdireccionprincipal_admi.getText();
+                        CalleSec = txtdireccionsecundaria_admi.getText();
       
     }
     /**
@@ -89,7 +93,33 @@ public class Registro_Admi extends javax.swing.JFrame {
                 ban_confirmar = false;
             }
         }
+       
+       if (txtdireccionprincipal_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese la direccion de la calle principal del representante");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarCallePrincipalSecu(CallePrin)) {
+                JOptionPane.showMessageDialog(this, "Direccion de la calle principal invalido");
+
+                ban_confirmar = false;
+            }
+        }
+        
+        if (txtdireccionsecundaria_admi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese la direccion de la calle secundaria del representante");
+            ban_confirmar = false;
+        } else {
+            if (!miValidaciones.validarCallePrincipalSecu(CalleSec)) {
+                JOptionPane.showMessageDialog(this, "Direccion de la calle principal invalido");
+
+                ban_confirmar = false;
+            }
+        }
+
+        
+    
         return ban_confirmar;
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -162,22 +192,12 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Direcciòn c/Principal : ");
 
-        txtcedula_admi.setText("0150631463");
         txtcedula_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtcedula_admiActionPerformed(evt);
             }
         });
 
-        txtprimernombre_admi.setText("Mariuxi");
-
-        txtsegundonombre_admi.setText("Andrea");
-
-        txtprimerapellido_admi.setText("Calle");
-
-        txtsegundoapellido_admi.setText("Dumaguala");
-
-        txtdireccionprincipal_admi.setText("tixan");
         txtdireccionprincipal_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtdireccionprincipal_admiActionPerformed(evt);
@@ -216,24 +236,18 @@ public class Registro_Admi extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Confirmar Contraseña : ");
 
-        txtdireccionsecundaria_admi.setText("Ochoa Leon");
-
-        txttitulo_admi.setText("Psicologo");
-
-        txttelefono_admi.setText("453454");
         txttelefono_admi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttelefono_admiActionPerformed(evt);
             }
         });
 
-        txtcorreo_admi.setText("andreacalle888@gmail.com");
-
         txtsexo_admi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
-
-        txtcontraseña_admi.setText("jPasswordField1");
-
-        txtconfirmarcontraseña_admi.setText("jPasswordField2");
+        txtsexo_admi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtsexo_admiActionPerformed(evt);
+            }
+        });
 
         botonregistrarcuenta_admi.setBackground(new java.awt.Color(0, 102, 102));
         botonregistrarcuenta_admi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/registro.png"))); // NOI18N
@@ -426,6 +440,10 @@ public class Registro_Admi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txttelefono_admiActionPerformed
 
+    private void txtsexo_admiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsexo_admiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsexo_admiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -467,3 +485,4 @@ public class Registro_Admi extends javax.swing.JFrame {
     private javax.swing.JTextField txttitulo_admi;
     // End of variables declaration//GEN-END:variables
 }
+

@@ -49,6 +49,15 @@ public class Validaciones {
         return val;
     }
     
+    public boolean validarCallePrincipalSecu(String calle) {
+        calle = calle.trim();
+        boolean ban = false;
+        if (calle.matches("[[A-Za-z]\\s]*{3,30}")) {
+            ban = true;
+        }
+        return ban;
+    }
+    
     public boolean validarParentesco(String parentesco) {
         parentesco = parentesco.trim();
         boolean val = false;
