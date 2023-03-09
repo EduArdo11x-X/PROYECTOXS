@@ -10,6 +10,7 @@ package Interfaces;
  * @author Lenovo
  */
 public class Login_representante extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form Login_representante
