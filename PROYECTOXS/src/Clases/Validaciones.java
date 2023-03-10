@@ -15,7 +15,7 @@ public class Validaciones {
          public boolean validarCedula(String cadena) {
         cadena = cadena.trim();
         boolean ban = false;
-        if (cadena.matches("[0-9]{10}")) {
+        if (cadena.matches("([0-9]{10}╽╽[0-9]{8})")) {
             ban = true;
         }
         return ban;
@@ -48,6 +48,21 @@ public class Validaciones {
 
         return val;
     }
+    
+    public boolean validarParentesco(String parentesco) {
+        parentesco = parentesco.trim();
+        boolean val = false;
+        if (parentesco.matches("[[A-Za-z]\\s]*{3,30}")) {
+            val = true;
+        }
+        return val;
+    }
+    
+    
+    
+    
+    
+    
     
     
     

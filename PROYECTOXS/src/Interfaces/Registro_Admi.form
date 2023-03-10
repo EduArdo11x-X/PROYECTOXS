@@ -23,19 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -64,165 +57,156 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txtprimernombre_admi" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="nombre1" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtcedula_admi" pref="160" max="32767" attributes="0"/>
-                                      <Component id="txtsegundonombre_admi" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtprimerapellido_admi" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtsegundoapellido_admi" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cedula" pref="160" max="32767" attributes="0"/>
+                                      <Component id="nombre2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="apellido1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="apellido2" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                          <Component id="registrar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="cancelar" min="-2" pref="85" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="volver" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="330" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" pref="330" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="botonregistrarcuenta_admi" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                          <Component id="botoncancelar_admi" min="-2" pref="139" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="botonvolver_admi" min="-2" pref="126" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="330" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtconfirmarcontraseña_admi" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtcontraseña_admi" max="32767" attributes="0"/>
-                                          <Component id="txtdireccionsecundaria_admi" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtdireccionprincipal_admi" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txttitulo_admi" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txttelefono_admi" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtsexo_admi" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                                          <Component id="spinneredad_admi" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <Component id="txtcorreo_admi" alignment="0" pref="190" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                              <Component id="jLabel16" min="-2" pref="286" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="contra2" alignment="1" min="-2" pref="190" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="contra" max="32767" attributes="0"/>
+                                  <Component id="dir2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="dir1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="titulo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="telf" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="sexo" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                                  <Component id="edad" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="correo" alignment="0" pref="190" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spinneredad_admi" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="edad" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtsexo_admi" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="sexo" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txttitulo_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="titulo" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txttelefono_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="telf" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtcorreo_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="correo" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtdireccionprincipal_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="dir1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtdireccionsecundaria_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="dir2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel16" min="-2" pref="28" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtcedula_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cedula" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtcontraseña_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="contra" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtprimernombre_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nombre1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtconfirmarcontraseña_admi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="contra2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtsegundonombre_admi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtprimerapellido_admi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtsegundoapellido_admi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="77" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="botonregistrarcuenta_admi" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="botoncancelar_admi" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="botonvolver_admi" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nombre2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="apellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="apellido2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="registrar" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="cancelar" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="volver" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -294,40 +278,40 @@
             <Property name="text" type="java.lang.String" value="Direcci&#xf2;n c/Principal : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtcedula_admi">
+        <Component class="javax.swing.JTextField" name="cedula">
           <Properties>
             <Property name="text" type="java.lang.String" value="0150631463"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcedula_admiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cedulaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtprimernombre_admi">
+        <Component class="javax.swing.JTextField" name="nombre1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mariuxi"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtsegundonombre_admi">
+        <Component class="javax.swing.JTextField" name="nombre2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Andrea"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtprimerapellido_admi">
+        <Component class="javax.swing.JTextField" name="apellido1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Calle"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtsegundoapellido_admi">
+        <Component class="javax.swing.JTextField" name="apellido2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dumaguala"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtdireccionprincipal_admi">
+        <Component class="javax.swing.JTextField" name="dir1">
           <Properties>
             <Property name="text" type="java.lang.String" value="tixan"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdireccionprincipal_admiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dir1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
@@ -418,30 +402,27 @@
             <Property name="text" type="java.lang.String" value="Confirmar Contrase&#xf1;a : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtdireccionsecundaria_admi">
+        <Component class="javax.swing.JTextField" name="dir2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ochoa Leon"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txttitulo_admi">
+        <Component class="javax.swing.JTextField" name="titulo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Psicologo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txttelefono_admi">
+        <Component class="javax.swing.JTextField" name="telf">
           <Properties>
             <Property name="text" type="java.lang.String" value="453454"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelefono_admiActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtcorreo_admi">
+        <Component class="javax.swing.JTextField" name="correo">
           <Properties>
             <Property name="text" type="java.lang.String" value="andreacalle888@gmail.com"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="txtsexo_admi">
+        <Component class="javax.swing.JComboBox" name="sexo">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
@@ -454,43 +435,34 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="txtcontrase&#xf1;a_admi">
+        <Component class="javax.swing.JPasswordField" name="contra">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="txtconfirmarcontrase&#xf1;a_admi">
+        <Component class="javax.swing.JPasswordField" name="contra2">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="spinneredad_admi">
+        <Component class="javax.swing.JSpinner" name="edad">
         </Component>
-        <Component class="javax.swing.JButton" name="botonregistrarcuenta_admi">
+        <Component class="javax.swing.JButton" name="registrar">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ICONOS/registro.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Registrar Cuenta"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botoncancelar_admi">
+        <Component class="javax.swing.JButton" name="cancelar">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ICONOS/cNCELAR.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botonvolver_admi">
+        <Component class="javax.swing.JButton" name="volver">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ICONOS/REGRESAR1.jpg"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Volver"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonvolver_admiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -498,6 +470,14 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/ICONOS/admi.png"/>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel16">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registro Administrador"/>
           </Properties>
         </Component>
       </SubComponents>
