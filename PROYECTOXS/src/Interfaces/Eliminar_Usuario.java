@@ -217,21 +217,21 @@ public class Eliminar_Usuario extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         
-      ObjectContainer BaseD = Db4o.openFile(Inicio.direccionBD);
-        Buscar_UsuarioCedula(BaseD);
-        Cerrar_BD(BaseD);
+     // ObjectContainer BaseD = Db4o.openFile(Inicio.direccionBD);
+       // Buscar_UsuarioCedula(BaseD);
+        // Cerrar_BD(BaseD);
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
-       ObjectContainer BaseD = Db4o.openFile(Inicio.direccionBD);
-        Eliminar_UsuarioCedula(BaseD);
-        Cerrar_BD(BaseD);
+     //  ObjectContainer BaseD = Db4o.openFile(Inicio.direccionBD);
+     //   Eliminar_UsuarioCedula(BaseD);
+     //   Cerrar_BD(BaseD);
     }//GEN-LAST:event_eliminarActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          this.dispose();
-        Inicio v = new Inicio();
-            v.setVisible(true); 
+            Pag_adm vsar1 = new Pag_adm ();
+            vsar1.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

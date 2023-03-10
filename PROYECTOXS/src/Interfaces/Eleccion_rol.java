@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Interfaces;
+
+import Juego.Pagina_juego;
+
 /**
  *
  * @author Lenovo
@@ -77,6 +80,11 @@ public class Eleccion_rol extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/iniciar-sesion_1.png"))); // NOI18N
         jButton6.setText("Iniciar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -163,6 +171,12 @@ public class Eleccion_rol extends javax.swing.JFrame {
             Login_representante vsar1 = new Login_representante ();
             vsar1.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+this.dispose();
+            Pagina_juego vsar1 = new Pagina_juego();
+            vsar1.setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
