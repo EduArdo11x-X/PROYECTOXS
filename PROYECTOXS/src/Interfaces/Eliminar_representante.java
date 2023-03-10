@@ -33,19 +33,19 @@ public class Eliminar_representante extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         cedula_repre = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        eliminar_usu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
+        buscar_usu = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(72, 255, 178));
+        jPanel2.setBackground(new java.awt.Color(74, 127, 203));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
@@ -77,16 +77,16 @@ public class Eliminar_representante extends javax.swing.JFrame {
         });
         jPanel3.add(cedula_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 150, 40));
 
-        jButton2.setBackground(new java.awt.Color(153, 204, 255));
-        jButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/eliminar.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        eliminar_usu.setBackground(new java.awt.Color(153, 204, 255));
+        eliminar_usu.setForeground(new java.awt.Color(102, 102, 102));
+        eliminar_usu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/eliminar.png"))); // NOI18N
+        eliminar_usu.setBorder(null);
+        eliminar_usu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                eliminar_usuActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 50, 40));
+        jPanel3.add(eliminar_usu, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 50, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -96,36 +96,44 @@ public class Eliminar_representante extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(102, 102, 102));
         jComboBox1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion:", "Ver todos", "Cedula", " " }));
         jComboBox1.setBorder(null);
         jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 160, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Cedula", "Primer Nombre", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Sexo", "Edad", "Telefono", "Correo Electronico", "Calle Principal", "Calle Secundaria"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.setPreferredSize(new java.awt.Dimension(75, 64));
         jScrollPane1.setViewportView(jTable1);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 700, 160));
 
-        jButton3.setBackground(new java.awt.Color(153, 204, 255));
-        jButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/lupa.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buscar_usu.setBackground(new java.awt.Color(153, 204, 255));
+        buscar_usu.setForeground(new java.awt.Color(102, 102, 102));
+        buscar_usu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/lupa.png"))); // NOI18N
+        buscar_usu.setBorder(null);
+        buscar_usu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buscar_usuActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 50, 40));
+        jPanel3.add(buscar_usu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 50, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 730, 270));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 732, 10));
@@ -159,13 +167,13 @@ public class Eliminar_representante extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cedula_repreKeyTyped
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void eliminar_usuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_usuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_eliminar_usuActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buscar_usuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar_usuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buscar_usuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,9 +211,9 @@ public class Eliminar_representante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buscar_usu;
     private javax.swing.JTextField cedula_repre;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton eliminar_usu;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

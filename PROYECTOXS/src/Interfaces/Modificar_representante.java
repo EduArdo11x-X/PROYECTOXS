@@ -71,26 +71,32 @@ public class Modificar_representante extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese la cedula del representante que desea modificar:");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Primer nombre:");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Segundo nombre:");
         jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Primer Apellido:");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Segundo Apellido:");
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Sexo:");
         jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, 20));
 
@@ -107,6 +113,7 @@ public class Modificar_representante extends javax.swing.JFrame {
         jPanel4.add(snobinario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Edad:");
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, 30));
 
@@ -136,11 +143,13 @@ public class Modificar_representante extends javax.swing.JFrame {
         jPanel4.add(cedula_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Correo electronico:");
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
         jPanel4.add(correo_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 160, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Parentesco:");
         jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, -1, -1));
 
@@ -148,16 +157,19 @@ public class Modificar_representante extends javax.swing.JFrame {
         jPanel4.add(parentesco_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Calle principal:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, 30));
         jPanel4.add(calleprincipal_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 160, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Telefono:");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, -1, 20));
         jPanel4.add(telefono_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 160, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Calle Secundaria:");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, -1, 20));
         jPanel4.add(callesecundaria_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 160, -1));
@@ -195,7 +207,7 @@ public class Modificar_representante extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 74, 740, 410));
 
-        jPanel3.setBackground(new java.awt.Color(0, 76, 81));
+        jPanel3.setBackground(new java.awt.Color(93, 127, 182));
         jPanel3.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel3.setPreferredSize(new java.awt.Dimension(487, 487));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

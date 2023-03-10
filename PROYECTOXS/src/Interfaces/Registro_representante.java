@@ -314,7 +314,7 @@ public void LimpiarCampos() {
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Calle principal:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, -1, 30));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, -1, 30));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setText("Edad:");
@@ -360,14 +360,14 @@ public void LimpiarCampos() {
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Telefono:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, -1, 20));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, -1, 20));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setText("Sexo:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, 20));
         jPanel1.add(callesecundaria_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 160, -1));
-        jPanel1.add(calleprincipal_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, -1));
-        jPanel1.add(telefono_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 160, -1));
+        jPanel1.add(calleprincipal_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 160, -1));
+        jPanel1.add(telefono_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, -1));
 
         edad_repre.setModel(new javax.swing.SpinnerNumberModel(18, 18, 80, 1));
         jPanel1.add(edad_repre, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
