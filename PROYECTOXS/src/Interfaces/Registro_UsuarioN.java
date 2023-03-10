@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import com.db4o.ObjectContainer;
+
 /**
  *
  * @author HP
@@ -139,6 +141,11 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
         jRadioButton1.setBackground(new java.awt.Color(204, 204, 255));
         jRadioButton1.setText("Femenino");
         jRadioButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         jRadioButton2.setBackground(new java.awt.Color(204, 204, 255));
         jRadioButton2.setText("Masculino");
@@ -207,7 +214,7 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jRadioButton1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jRadioButton2))
                                     .addComponent(jTextField5)
                                     .addComponent(jTextField7)
@@ -340,6 +347,10 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -379,4 +390,8 @@ public class Registro_UsuarioN extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
+
+    public int Comprobar_Usuario(ObjectContainer BaseD, String CODIGOAux) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
